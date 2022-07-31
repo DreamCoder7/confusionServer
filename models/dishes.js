@@ -55,7 +55,7 @@ const dishSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
-	albel: {
+	label: {
 		type: String,
 		required: true
 	},
