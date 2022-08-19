@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-
+require('mongoose-currency').loadType(mongoose);
+const Currency = mongoose.Types.Currency;
 
 
 const disheSchema = new mongoose.Schema({
@@ -59,9 +60,8 @@ const dishSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
-	// TEMP : type sholud be replaced by currency
 	price: {
-		type: String,
+		type: Currency,
 		required: true
 	},
 	featured: {
