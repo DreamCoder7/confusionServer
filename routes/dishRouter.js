@@ -209,7 +209,7 @@ dishRouter.route('/:dishId/comments/:commentId')
 	.catch((err) =>  next(err))
 })
 .delete((req, res, next) => {
-	Dihses.findById(req.params.dishId)
+	Dishes.findById(req.params.dishId)
 	.then((dish) => {
 		if(dish != null && dish.comments.id(req.params.commentId) != null) {
 			dish.comments.id(req.params.commentId).remove();
